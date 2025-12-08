@@ -62,7 +62,7 @@ const updateUser = async (req: Request, res: Response) => {
     } else {
       res.status(200).json({
         success: true,
-        message: "Users updated successfully",
+        message: "User updated successfully",
         data: result.rows,
       });
     }
