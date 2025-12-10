@@ -26,7 +26,6 @@ const auth = (...roles: string[]) => {
         error: "Unauthorized!!",
       });
     }
-    console.log(decoded);
     next();
   };
 };

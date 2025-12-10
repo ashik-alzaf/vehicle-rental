@@ -2,6 +2,7 @@ import { Pool } from "pg";
 import config from ".";
 export const pool = new Pool({
   connectionString: config.connect_str,
+  
 });
 const initDB = async () => {
   await pool.query(`
@@ -38,7 +39,7 @@ const initDB = async () => {
             rent_start_date DATE,
             rent_end_date DATE,
             total_price INT NOT NULL,
-            status VARCHAR(50)
+            status VARCHAR(30) NOT NULL DEFAULT 'active'
             )
             `);
 };
